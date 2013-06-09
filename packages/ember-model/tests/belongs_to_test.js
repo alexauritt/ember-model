@@ -15,4 +15,8 @@ test("is a CP macro", function() {
   
   var ret = cp.func.call(person, "address");
   ok(ret instanceof Ember.Model);
+
+  equal(ret.get('modelClass'), Address);
+  equal(ret.get('parent'), person);
+  deepEqual(ret.get('content'), address);
 });
