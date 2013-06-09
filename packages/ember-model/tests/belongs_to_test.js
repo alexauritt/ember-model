@@ -5,8 +5,8 @@ test("it exists", function() {
 });
 
 test("is a CP macro", function() {
-  var Person = Ember.Model.extend();
-  var cp = Ember.belongsTo(Person, 'address');
+  var Address = Ember.Model.extend();
+  var cp = Ember.belongsTo(Address, 'address');
 
   ok(cp instanceof Ember.ComputedProperty);
   
@@ -15,6 +15,4 @@ test("is a CP macro", function() {
   
   var ret = cp.func.call(person, "address");
   ok(ret instanceof Ember.Model);
-
-
 });
